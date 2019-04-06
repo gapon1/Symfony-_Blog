@@ -31,7 +31,6 @@ class PostController extends Controller
         $post = new Post();
         $form = $this->createForm(PostType::class, $post);
 
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -41,10 +40,6 @@ class PostController extends Controller
 
             $this->addFlash('success', 'Car updated!');
 
-
-//            return $this->redirectToRoute('homepage');
-
-
         }
 
         return $this->render('blog/newPost.html.twig', [
@@ -53,16 +48,5 @@ class PostController extends Controller
 
     }
 
-    /**
-     * @Route("test", name="test")
-     */
-    public function addAction()
-    {
-        $test = "Test";
-        return $this->render('blog/newPost.html.twig', [
-            'test' => $test
-        ]);
-
-    }
 
 }
