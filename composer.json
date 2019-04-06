@@ -18,6 +18,7 @@
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-fixtures-bundle": "^3.0",
         "doctrine/orm": "^2.5",
+        "erusev/parsedown": "^1.7",
         "incenteev/composer-parameter-handler": "^2.0",
         "nelmio/alice": "^2.1",
         "sensio/distribution-bundle": "^5.0.19",

@@ -8,7 +8,7 @@
 
 namespace AppBundle\Entity;
 
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -27,6 +27,7 @@ class Post
     private $id;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank()
      */
     private $title;
 
@@ -48,7 +49,7 @@ class Post
     private $publishedAt;
     /**
      * @ORM\OneToMany(
-     * targetEntity="App\Entity\Comment",
+     * targetEntity="AppBundle\Entity\Comment",
      * mappedBy="post",
      * orphanRemoval=true
      * )
@@ -60,7 +61,103 @@ class Post
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
     }
-// getters and setters ...
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param mixed $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param mixed $content
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthorEmail()
+    {
+        return $this->authorEmail;
+    }
+
+    /**
+     * @param mixed $authorEmail
+     */
+    public function setAuthorEmail($authorEmail)
+    {
+        $this->authorEmail = $authorEmail;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPublishedAt()
+    {
+        return $this->publishedAt;
+    }
+
+    /**
+     * @param mixed $publishedAt
+     */
+    public function setPublishedAt($publishedAt)
+    {
+        $this->publishedAt = $publishedAt;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param mixed $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
 
 
 }

@@ -1,0 +1,67 @@
+body {
+	padding-top: 50px;
+	color: #959595;
+	}
+	
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	}
+	
+.feature {
+	background-color: yellowgreen;
+	color: greenyellow;
+	}
+	
+.article-intro {
+    margin-bottom: 25px;
+}
+
+.footer-blurb {
+    padding: 10px 0;
+    background-color: goldenrod;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 30px;
+    }
+ 
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+
+
+.form-wrapper {
+	width: 500px;
+	margin:50px auto 0px;
+}
+
+:root {
+	--jumbotron-padding-y: 3rem;
+}
+.pagination{
+	margin-bottom: 50px;
+}
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	margin-top: 100px;
+}
+
+.top_sect{
+	padding: 0!important;
+}
+.form-signin input, .form-signin textarea {
+	margin-bottom: 20px;
+	display: block;
+}
+.status_color_green{
+	color: forestgreen;
+}
+.status_color_red{
+	color: red;
+}
